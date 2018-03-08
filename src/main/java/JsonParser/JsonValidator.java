@@ -2,7 +2,6 @@
 package JsonParser;
 
 import org.everit.json.schema.Schema;
-import org.everit.json.schema.ValidationException;
 import org.everit.json.schema.loader.SchemaLoader;
 import org.json.JSONObject;
 
@@ -22,7 +21,7 @@ public class JsonValidator {
 			schemaT.validate(jsonPayLoad);
 						
 			
-		}catch(ValidationException e)
+		}catch(Exception e)
 		{
 			return e.getMessage();
 		}
